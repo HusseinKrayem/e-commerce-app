@@ -8,9 +8,7 @@ const createAdmin = async () => {
 
     if (!process.env.ADMIN_EMAIL || !process.env.ADMIN_PASSWORD) {
       console.error('Error: ADMIN_EMAIL and ADMIN_PASSWORD must be set in .env file');
-      console.log('💡 Please add to your .env file:');
-      console.log('ADMIN_EMAIL=your-admin-email@example.com');
-      console.log('ADMIN_PASSWORD=your-secure-password');
+      console.log('Please add to your .env file:');
       process.exit(1);
     }
 
@@ -36,7 +34,7 @@ const createAdmin = async () => {
     });
 
     console.log('Admin user created successfully!');
-    
+
     process.exit(0);
   } catch (error) {
     console.error('Error creating admin:', error.message);
