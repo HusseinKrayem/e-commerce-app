@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - E-commerce Platform</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/auth.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🛒 MyStore</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/pages/products.html" class="nav-link">Products</a>
+                <a href="/pages/cart.html" class="nav-link">Cart</a>
+                <a href="/pages/orders.html" class="nav-link">Orders</a>
+                <div class="auth-section">
+                    <a href="/pages/login.html" class="btn btn-outline" id="loginLink">Login</a>
+                    <a href="/pages/register.html" class="btn btn-primary" id="registerLink">Register</a>
+                    <div id="userMenu" style="display: none;">
+                        <button class="btn btn-outline" id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to MyStore</h1>
+            <p>Discover amazing products at great prices</p>
+            <a href="/pages/products.html" class="btn btn-primary btn-large">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div id="featuredProducts" class="products-grid">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MyStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3744 @@
+{
+	"info": {
+		"_postman_id": "265eafe3-7b34-466f-be19-c573f31f7e70",
+		"name": "E-Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40780132"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzMzOTksImV4cCI6MTc2MTkzODE5OX0.aomej1fE1wD3rP-rpBBmVdYxHQb-lWXjThBhQbVULV0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"New User\",  \r\n  \"email\": \"newUser123@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/authMiddleware/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"authMiddleware",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzMzOTksImV4cCI6MTc2MTkzODE5OX0.aomej1fE1wD3rP-rpBBmVdYxHQb-lWXjThBhQbVULV0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"New User\",  \r\n  \"email\": \"newUser123@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/authMiddleware/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authMiddleware",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "359",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 15:59:45 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"68fcf3f1edf106af778a87d3\",\n            \"name\": \"New User\",\n            \"email\": \"newuser123@example.com\",\n            \"role\": \"user\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZjZjNmMWVkZjEwNmFmNzc4YTg3ZDMiLCJpYXQiOjE3NjE0MDc5ODUsImV4cCI6MTc2MjAxMjc4NX0.3KhiTolf4h5Fi5jhZYo_tWSJMj8rxKkyfnsQlH9vIWs\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzMzOTksImV4cCI6MTc2MTkzODE5OX0.aomej1fE1wD3rP-rpBBmVdYxHQb-lWXjThBhQbVULV0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"newUser123@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/authMiddleware/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"authMiddleware",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzMzOTksImV4cCI6MTc2MTkzODE5OX0.aomej1fE1wD3rP-rpBBmVdYxHQb-lWXjThBhQbVULV0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"newUser123@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/authMiddleware/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"authMiddleware",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "359",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:00:08 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"68fcf3f1edf106af778a87d3\",\n            \"name\": \"New User\",\n            \"email\": \"newuser123@example.com\",\n            \"role\": \"user\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZjZjNmMWVkZjEwNmFmNzc4YTg3ZDMiLCJpYXQiOjE3NjE0MDgwMDgsImV4cCI6MTc2MjAxMjgwOH0.hfQ5WT3vhH3seq4-EJZ-dnjC-f3LjG12QoAMBJYnhpU\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\": \"UpdatedNewUser\",\r\n\"email\": \"newUser123@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/68fcf3f1edf106af778a87d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"68fcf3f1edf106af778a87d3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateUser",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"name\": \"UpdatedNewUser\",\r\n\"email\": \"newUser123@example.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/68fcf3f1edf106af778a87d3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"68fcf3f1edf106af778a87d3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "253",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:00:52 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"_id\": \"68fcf3f1edf106af778a87d3\",\n        \"name\": \"UpdatedNewUser\",\n        \"email\": \"newuser123@example.com\",\n        \"role\": \"user\",\n        \"createdAt\": \"2025-10-25T15:59:45.582Z\",\n        \"updatedAt\": \"2025-10-25T16:00:52.580Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/68fabb0ea49184cefbdbb304",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"68fabb0ea49184cefbdbb304"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users/68fabb0ea49184cefbdbb304",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"68fabb0ea49184cefbdbb304"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "54",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:01:46 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1340",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:02:42 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"count\": 7,\n    \"data\": [\n        {\n            \"_id\": \"68faaf2ca9589c094804c22f\",\n            \"name\": \"Test User\",\n            \"email\": \"test@example.com\",\n            \"role\": \"user\",\n            \"createdAt\": \"2025-10-23T22:41:48.675Z\",\n            \"updatedAt\": \"2025-10-23T22:41:48.675Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fab60adc7f0d13e87bb587\",\n            \"name\": \"Test User\",\n            \"email\": \"test2@example.com\",\n            \"role\": \"user\",\n            \"createdAt\": \"2025-10-23T23:11:06.671Z\",\n            \"updatedAt\": \"2025-10-23T23:11:06.671Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fab674dc7f0d13e87bb58c\",\n            \"name\": \"Test User\",\n            \"email\": \"test1@example.com\",\n            \"role\": \"user\",\n            \"createdAt\": \"2025-10-23T23:12:52.271Z\",\n            \"updatedAt\": \"2025-10-23T23:12:52.271Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbd097aacb3aa7c008dca9\",\n            \"name\": \"Updated Name\",\n            \"email\": \"updated@example.com\",\n            \"role\": \"user\",\n            \"createdAt\": \"2025-10-24T19:16:39.059Z\",\n            \"updatedAt\": \"2025-10-24T19:26:54.376Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbf8028d43bd8bab2b15be\",\n            \"name\": \"System Administrator\",\n            \"email\": \"admin@example.com\",\n            \"role\": \"admin\",\n            \"createdAt\": \"2025-10-24T22:04:50.702Z\",\n            \"updatedAt\": \"2025-10-24T22:04:50.702Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fcb899b727760c7e09e860\",\n            \"name\": \"Updateddd\",\n            \"email\": \"updateddd2@example.com\",\n            \"role\": \"user\",\n            \"createdAt\": \"2025-10-25T11:46:33.682Z\",\n            \"updatedAt\": \"2025-10-25T11:47:16.337Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fcf3f1edf106af778a87d3\",\n            \"name\": \"UpdatedNewUser\",\n            \"email\": \"newuser123@example.com\",\n            \"role\": \"user\",\n            \"createdAt\": \"2025-10-25T15:59:45.582Z\",\n            \"updatedAt\": \"2025-10-25T16:00:52.580Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzMzOTksImV4cCI6MTc2MTkzODE5OX0.aomej1fE1wD3rP-rpBBmVdYxHQb-lWXjThBhQbVULV0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/68fcf3f1edf106af778a87d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"68fcf3f1edf106af778a87d3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzMzOTksImV4cCI6MTc2MTkzODE5OX0.aomej1fE1wD3rP-rpBBmVdYxHQb-lWXjThBhQbVULV0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users/68fcf3f1edf106af778a87d3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"68fcf3f1edf106af778a87d3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "215",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:03:51 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"68fcf3f1edf106af778a87d3\",\n        \"name\": \"UpdatedNewUser\",\n        \"email\": \"newuser123@example.com\",\n        \"role\": \"user\",\n        \"createdAt\": \"2025-10-25T15:59:45.582Z\",\n        \"updatedAt\": \"2025-10-25T16:00:52.580Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PRODUCT",
+			"item": [
+				{
+					"name": "CreateProductByUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzOTQ3MDEsImV4cCI6MTc2MTk5OTUwMX0.F6uCuwwBV7K3uQS3AuJ9fyO6ssvJRsCNEVkZxMFyKmA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test product\",\r\n  \"description\": \"A description for test product\",\r\n  \"price\": 500,\r\n  \"category\": \"test category\",\r\n  \"stock\": 10,\r\n  \"availability\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateProductByUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzOTQ3MDEsImV4cCI6MTc2MTk5OTUwMX0.F6uCuwwBV7K3uQS3AuJ9fyO6ssvJRsCNEVkZxMFyKmA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"test product\",\r\n  \"description\": \"A description for test product\",\r\n  \"price\": 500,\r\n  \"category\": \"test category\",\r\n  \"stock\": 10,\r\n  \"availability\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "71",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:07:19 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Access denied. Admin privileges required.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateProductByAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"test product\",\r\n  \"description\": \"A description for test product\",\r\n  \"price\": 500,\r\n  \"category\": \"test category\",\r\n  \"stock\": 10,\r\n  \"availability\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateProductByAdmin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"test product\",\r\n  \"description\": \"A description for test product\",\r\n  \"price\": 500,\r\n  \"category\": \"test category\",\r\n  \"stock\": 10,\r\n  \"availability\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "335",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:09:24 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"name\": \"test product\",\n        \"description\": \"A description for test product\",\n        \"price\": 500,\n        \"category\": \"test category\",\n        \"stock\": 10,\n        \"availability\": true,\n        \"image\": \"\",\n        \"_id\": \"68fcf634edf106af778a87e6\",\n        \"createdAt\": \"2025-10-25T16:09:24.525Z\",\n        \"updatedAt\": \"2025-10-25T16:09:24.525Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateProductByUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"updated test product\",\r\n  \"price\": 499\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/68fcf634edf106af778a87e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"68fcf634edf106af778a87e6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateProductByUser",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"updated test product\",\r\n  \"price\": 499\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/products/68fcf634edf106af778a87e6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"68fcf634edf106af778a87e6"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "71",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:11:37 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Access denied. Admin privileges required.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateProductByAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"updated test product\",\r\n  \"price\": 499\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/products/68fcf634edf106af778a87e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"68fcf634edf106af778a87e6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateProductByAdmin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"updated test product\",\r\n  \"price\": 499\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/products/68fcf634edf106af778a87e6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"68fcf634edf106af778a87e6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "343",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:12:38 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Product updated successfully\",\n    \"data\": {\n        \"_id\": \"68fcf634edf106af778a87e6\",\n        \"name\": \"updated test product\",\n        \"description\": \"A description for test product\",\n        \"price\": 499,\n        \"category\": \"test category\",\n        \"stock\": 10,\n        \"availability\": true,\n        \"image\": \"\",\n        \"createdAt\": \"2025-10-25T16:09:24.525Z\",\n        \"updatedAt\": \"2025-10-25T16:12:38.000Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllProducts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1414",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:12:48 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"68fcf634edf106af778a87e6\",\n            \"name\": \"updated test product\",\n            \"description\": \"A description for test product\",\n            \"price\": 499,\n            \"category\": \"test category\",\n            \"stock\": 10,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-25T16:09:24.525Z\",\n            \"updatedAt\": \"2025-10-25T16:12:38.000Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fcbc855a48a241fe72dbbf\",\n            \"name\": \"aaaa 5G\",\n            \"description\": \"Samsung Aaaaaa\",\n            \"price\": 221,\n            \"category\": \"samsung\",\n            \"stock\": 30,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-25T12:03:17.047Z\",\n            \"updatedAt\": \"2025-10-25T12:03:17.047Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbe0650df6479e0f07c8b2\",\n            \"name\": \"A54 5G\",\n            \"description\": \"Latest Samsung A\",\n            \"price\": 333,\n            \"category\": \"electronics\",\n            \"stock\": 30,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-24T20:24:05.708Z\",\n            \"updatedAt\": \"2025-10-24T20:24:05.708Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbdf9e0df6479e0f07c8a5\",\n            \"name\": \"iPhone 15\",\n            \"description\": \"Latest Apple smartphone\",\n            \"price\": 999,\n            \"category\": \"electronics\",\n            \"stock\": 45,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-24T20:20:46.335Z\",\n            \"updatedAt\": \"2025-10-24T21:11:27.192Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n            \"name\": \"MacBook Pro M3\",\n            \"description\": \"Latest Apple smartphone\",\n            \"price\": 2099,\n            \"category\": \"test\",\n            \"stock\": 20,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-24T18:22:20.173Z\",\n            \"updatedAt\": \"2025-10-24T20:24:47.522Z\",\n            \"__v\": 0\n        }\n    ],\n    \"pagination\": {\n        \"current\": 1,\n        \"totalPages\": 1,\n        \"totalProducts\": 5,\n        \"hasNextPage\": false,\n        \"hasPrevPage\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetProductsByFilter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products?sort=price&order=desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "price"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetProductsByFilter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/products?sort=price&order=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "price"
+										},
+										{
+											"key": "order",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1414",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:13:17 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n            \"name\": \"MacBook Pro M3\",\n            \"description\": \"Latest Apple smartphone\",\n            \"price\": 2099,\n            \"category\": \"test\",\n            \"stock\": 20,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-24T18:22:20.173Z\",\n            \"updatedAt\": \"2025-10-24T20:24:47.522Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbdf9e0df6479e0f07c8a5\",\n            \"name\": \"iPhone 15\",\n            \"description\": \"Latest Apple smartphone\",\n            \"price\": 999,\n            \"category\": \"electronics\",\n            \"stock\": 45,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-24T20:20:46.335Z\",\n            \"updatedAt\": \"2025-10-24T21:11:27.192Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fcf634edf106af778a87e6\",\n            \"name\": \"updated test product\",\n            \"description\": \"A description for test product\",\n            \"price\": 499,\n            \"category\": \"test category\",\n            \"stock\": 10,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-25T16:09:24.525Z\",\n            \"updatedAt\": \"2025-10-25T16:12:38.000Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fbe0650df6479e0f07c8b2\",\n            \"name\": \"A54 5G\",\n            \"description\": \"Latest Samsung A\",\n            \"price\": 333,\n            \"category\": \"electronics\",\n            \"stock\": 30,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-24T20:24:05.708Z\",\n            \"updatedAt\": \"2025-10-24T20:24:05.708Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"68fcbc855a48a241fe72dbbf\",\n            \"name\": \"aaaa 5G\",\n            \"description\": \"Samsung Aaaaaa\",\n            \"price\": 221,\n            \"category\": \"samsung\",\n            \"stock\": 30,\n            \"availability\": true,\n            \"image\": \"\",\n            \"createdAt\": \"2025-10-25T12:03:17.047Z\",\n            \"updatedAt\": \"2025-10-25T12:03:17.047Z\",\n            \"__v\": 0\n        }\n    ],\n    \"pagination\": {\n        \"current\": 1,\n        \"totalPages\": 1,\n        \"totalProducts\": 5,\n        \"hasNextPage\": false,\n        \"hasPrevPage\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products/68fcf634edf106af778a87e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"68fcf634edf106af778a87e6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetProductById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/products/68fcf634edf106af778a87e6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"68fcf634edf106af778a87e6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "302",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:13:50 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"68fcf634edf106af778a87e6\",\n        \"name\": \"updated test product\",\n        \"description\": \"A description for test product\",\n        \"price\": 499,\n        \"category\": \"test category\",\n        \"stock\": 10,\n        \"availability\": true,\n        \"image\": \"\",\n        \"createdAt\": \"2025-10-25T16:09:24.525Z\",\n        \"updatedAt\": \"2025-10-25T16:12:38.000Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteProductByUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products/68fcbc855a48a241fe72dbbf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"68fcbc855a48a241fe72dbbf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteProductByUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/products/68fcbc855a48a241fe72dbbf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"68fcbc855a48a241fe72dbbf"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "71",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:14:17 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Access denied. Admin privileges required.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteProductByAdmin",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/products/68fcbc855a48a241fe72dbbf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"68fcbc855a48a241fe72dbbf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteProductByAdmin",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/products/68fcbc855a48a241fe72dbbf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"68fcbc855a48a241fe72dbbf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "57",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:15:22 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Product deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CART",
+			"item": [
+				{
+					"name": "AddToCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"68fbc3dc43a68f3503bce9e7\",\r\n  \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cart/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"items"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AddToCart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"productId\": \"68fbc3dc43a68f3503bce9e7\",\r\n  \"quantity\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/cart/items",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cart",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "407",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:20:45 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Item added to cart\",\n    \"data\": {\n        \"_id\": \"68fbe3af77eb9099b6470f24\",\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n                    \"name\": \"MacBook Pro M3\",\n                    \"price\": 2099,\n                    \"availability\": true,\n                    \"image\": \"\"\n                },\n                \"quantity\": 3,\n                \"price\": 2099,\n                \"_id\": \"68fcf8ddedf106af778a8815\"\n            }\n        ],\n        \"total\": 6297,\n        \"createdAt\": \"2025-10-24T20:38:07.540Z\",\n        \"updatedAt\": \"2025-10-25T16:20:45.687Z\",\n        \"__v\": 13\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetCart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/cart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "541",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:17:08 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"68fbe3af77eb9099b6470f24\",\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"68fbe0650df6479e0f07c8b2\",\n                    \"name\": \"A54 5G\",\n                    \"price\": 333,\n                    \"availability\": true,\n                    \"image\": \"\"\n                },\n                \"quantity\": 5,\n                \"price\": 333,\n                \"_id\": \"68fbef181ede959d460c28e2\"\n            },\n            {\n                \"product\": {\n                    \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n                    \"name\": \"MacBook Pro M3\",\n                    \"price\": 2099,\n                    \"availability\": true,\n                    \"image\": \"\"\n                },\n                \"quantity\": 6,\n                \"price\": 2099,\n                \"_id\": \"68fbef631ede959d460c28e9\"\n            }\n        ],\n        \"total\": 14259,\n        \"createdAt\": \"2025-10-24T20:38:07.540Z\",\n        \"updatedAt\": \"2025-10-25T16:16:14.866Z\",\n        \"__v\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateCart",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cart/items/68fbef631ede959d460c28e9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"items",
+								"68fbef631ede959d460c28e9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateCart",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"quantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/cart/items/68fbef631ede959d460c28e9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cart",
+										"items",
+										"68fbef631ede959d460c28e9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "578",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:17:38 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Cart updated successfully\",\n    \"data\": {\n        \"_id\": \"68fbe3af77eb9099b6470f24\",\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"68fbe0650df6479e0f07c8b2\",\n                    \"name\": \"A54 5G\",\n                    \"price\": 333,\n                    \"availability\": true,\n                    \"image\": \"\"\n                },\n                \"quantity\": 5,\n                \"price\": 333,\n                \"_id\": \"68fbef181ede959d460c28e2\"\n            },\n            {\n                \"product\": {\n                    \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n                    \"name\": \"MacBook Pro M3\",\n                    \"price\": 2099,\n                    \"availability\": true,\n                    \"image\": \"\"\n                },\n                \"quantity\": 1,\n                \"price\": 2099,\n                \"_id\": \"68fbef631ede959d460c28e9\"\n            }\n        ],\n        \"total\": 3764,\n        \"createdAt\": \"2025-10-24T20:38:07.540Z\",\n        \"updatedAt\": \"2025-10-25T16:17:38.741Z\",\n        \"__v\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "RemoveFromCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/cart/items/68fbef181ede959d460c28e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"items",
+								"68fbef181ede959d460c28e2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "RemoveFromCart",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/cart/items/68fbef181ede959d460c28e2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cart",
+										"items",
+										"68fbef181ede959d460c28e2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "411",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:18:31 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Item removed from cart\",\n    \"data\": {\n        \"_id\": \"68fbe3af77eb9099b6470f24\",\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n                    \"name\": \"MacBook Pro M3\",\n                    \"price\": 2099,\n                    \"availability\": true,\n                    \"image\": \"\"\n                },\n                \"quantity\": 1,\n                \"price\": 2099,\n                \"_id\": \"68fbef631ede959d460c28e9\"\n            }\n        ],\n        \"total\": 2099,\n        \"createdAt\": \"2025-10-24T20:38:07.540Z\",\n        \"updatedAt\": \"2025-10-25T16:18:31.018Z\",\n        \"__v\": 11\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ClearCart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ClearCart",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/cart",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "238",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:19:01 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Cart cleared successfully\",\n    \"data\": {\n        \"_id\": \"68fbe3af77eb9099b6470f24\",\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [],\n        \"total\": 0,\n        \"createdAt\": \"2025-10-24T20:38:07.540Z\",\n        \"updatedAt\": \"2025-10-25T16:19:01.123Z\",\n        \"__v\": 12\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ORDER",
+			"item": [
+				{
+					"name": "CreateOrderWithEmptyCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shippingAddress\": {\r\n    \"street\": \"123 Test Street\",\r\n    \"city\": \"Test City\",\r\n    \"state\": \"BEY\",\r\n    \"zipCode\": \"0000\",\r\n    \"country\": \"LEB\"\r\n  },\r\n  \"paymentMethod\": \"credit_card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateOrderWithEmptyCart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"shippingAddress\": {\r\n    \"street\": \"123 Test Street\",\r\n    \"city\": \"Test City\",\r\n    \"state\": \"BEY\",\r\n    \"zipCode\": \"0000\",\r\n    \"country\": \"LEB\"\r\n  },\r\n  \"paymentMethod\": \"credit_card\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "43",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:19:42 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Cart is empty\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shippingAddress\": {\r\n    \"street\": \"123 Main Street\",\r\n    \"city\": \"New York\",\r\n    \"state\": \"NY\",\r\n    \"zipCode\": \"10001\",\r\n    \"country\": \"USA\"\r\n  },\r\n  \"paymentMethod\": \"credit_card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateOrder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"shippingAddress\": {\r\n    \"street\": \"123 Main Street\",\r\n    \"city\": \"New York\",\r\n    \"state\": \"NY\",\r\n    \"zipCode\": \"10001\",\r\n    \"country\": \"USA\"\r\n  },\r\n  \"paymentMethod\": \"credit_card\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "603",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:20:51 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Order created successfully\",\n    \"data\": {\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n                    \"name\": \"MacBook Pro M3\",\n                    \"image\": \"\"\n                },\n                \"quantity\": 3,\n                \"price\": 2099,\n                \"name\": \"MacBook Pro M3\",\n                \"image\": \"\",\n                \"_id\": \"68fcf8e3edf106af778a881d\"\n            }\n        ],\n        \"total\": 6297,\n        \"status\": \"pending\",\n        \"shippingAddress\": {\n            \"street\": \"123 Main Street\",\n            \"city\": \"New York\",\n            \"state\": \"NY\",\n            \"zipCode\": \"10001\",\n            \"country\": \"USA\"\n        },\n        \"paymentMethod\": \"credit_card\",\n        \"paymentStatus\": \"pending\",\n        \"_id\": \"68fcf8e3edf106af778a881c\",\n        \"createdAt\": \"2025-10-25T16:20:51.544Z\",\n        \"updatedAt\": \"2025-10-25T16:20:51.544Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GetUserOrders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetUserOrders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "1186",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:21:10 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"shippingAddress\": {\n                \"street\": \"123 Main Street\",\n                \"city\": \"New York\",\n                \"state\": \"NY\",\n                \"zipCode\": \"10001\",\n                \"country\": \"USA\"\n            },\n            \"_id\": \"68fcf8e3edf106af778a881c\",\n            \"user\": \"68fbd097aacb3aa7c008dca9\",\n            \"items\": [\n                {\n                    \"product\": {\n                        \"_id\": \"68fbc3dc43a68f3503bce9e7\",\n                        \"name\": \"MacBook Pro M3\",\n                        \"image\": \"\"\n                    },\n                    \"quantity\": 3,\n                    \"price\": 2099,\n                    \"name\": \"MacBook Pro M3\",\n                    \"image\": \"\",\n                    \"_id\": \"68fcf8e3edf106af778a881d\"\n                }\n            ],\n            \"total\": 6297,\n            \"status\": \"pending\",\n            \"paymentMethod\": \"credit_card\",\n            \"paymentStatus\": \"pending\",\n            \"createdAt\": \"2025-10-25T16:20:51.544Z\",\n            \"updatedAt\": \"2025-10-25T16:20:51.544Z\",\n            \"__v\": 0\n        },\n        {\n            \"shippingAddress\": {\n                \"street\": \"123 Main Street\",\n                \"city\": \"New York\",\n                \"state\": \"NY\",\n                \"zipCode\": \"10001\",\n                \"country\": \"USA\"\n            },\n            \"_id\": \"68fbeb7fe2d8e1d84b8aeca7\",\n            \"user\": \"68fbd097aacb3aa7c008dca9\",\n            \"items\": [\n                {\n                    \"product\": {\n                        \"_id\": \"68fbdf9e0df6479e0f07c8a5\",\n                        \"name\": \"iPhone 15\",\n                        \"image\": \"\"\n                    },\n                    \"quantity\": 5,\n                    \"price\": 999,\n                    \"name\": \"iPhone 15\",\n                    \"image\": \"\",\n                    \"_id\": \"68fbeb7fe2d8e1d84b8aeca8\"\n                }\n            ],\n            \"total\": 4995,\n            \"status\": \"shipped\",\n            \"paymentMethod\": \"credit_card\",\n            \"paymentStatus\": \"pending\",\n            \"createdAt\": \"2025-10-24T21:11:27.188Z\",\n            \"updatedAt\": \"2025-10-24T21:14:34.906Z\",\n            \"__v\": 0\n        }\n    ],\n    \"pagination\": {\n        \"current\": 1,\n        \"totalPages\": 1,\n        \"totalOrders\": 2,\n        \"hasNext\": false,\n        \"hasPrev\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateStatusWithUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"shipped\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/orders/68fbeb7fe2d8e1d84b8aeca7/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"orders",
+								"68fbeb7fe2d8e1d84b8aeca7",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateStatusWithUser",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZDA5N2FhY2IzYWE3YzAwOGRjYTkiLCJpYXQiOjE3NjEzMzUyNTAsImV4cCI6MTc2MTk0MDA1MH0.aq9qwcrjsHYU1vlxXYsUHU1kO0H0JklEByaARBDywfc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"shipped\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/orders/68fbeb7fe2d8e1d84b8aeca7/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"orders",
+										"68fbeb7fe2d8e1d84b8aeca7",
+										"status"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "71",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:21:37 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Access denied. Admin privileges required.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateStatusWithAdmin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"shipped\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/orders/68fbeb7fe2d8e1d84b8aeca7/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"orders",
+								"68fbeb7fe2d8e1d84b8aeca7",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UpdateStatusWithAdmin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGZiZjgwMjhkNDNiZDhiYWIyYjE1YmUiLCJpYXQiOjE3NjEzOTI5MjMsImV4cCI6MTc2MTk5NzcyM30.-qcBvwiTcRSVeLuQF0tJ3ZhuDHyjzsfsG_CKdrpYpSI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"shipped\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/orders/68fbeb7fe2d8e1d84b8aeca7/status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"orders",
+										"68fbeb7fe2d8e1d84b8aeca7",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"type": "text"
+								},
+								{
+									"key": "content-length",
+									"value": "599",
+									"type": "text"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Oct 2025 16:22:32 GMT",
+									"type": "text"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"type": "text"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Order status updated successfully\",\n    \"data\": {\n        \"shippingAddress\": {\n            \"street\": \"123 Main Street\",\n            \"city\": \"New York\",\n            \"state\": \"NY\",\n            \"zipCode\": \"10001\",\n            \"country\": \"USA\"\n        },\n        \"_id\": \"68fbeb7fe2d8e1d84b8aeca7\",\n        \"user\": \"68fbd097aacb3aa7c008dca9\",\n        \"items\": [\n            {\n                \"product\": {\n                    \"_id\": \"68fbdf9e0df6479e0f07c8a5\",\n                    \"name\": \"iPhone 15\",\n                    \"image\": \"\"\n                },\n                \"quantity\": 5,\n                \"price\": 999,\n                \"name\": \"iPhone 15\",\n                \"image\": \"\",\n                \"_id\": \"68fbeb7fe2d8e1d84b8aeca8\"\n            }\n        ],\n        \"total\": 4995,\n        \"status\": \"shipped\",\n        \"paymentMethod\": \"credit_card\",\n        \"paymentStatus\": \"pending\",\n        \"createdAt\": \"2025-10-24T21:11:27.188Z\",\n        \"updatedAt\": \"2025-10-25T16:22:32.610Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
