@@ -7,8 +7,7 @@ A feature-rich, production-ready backend API for an e-commerce platform built wi
 - Includes all endpoints for Auth, Users, Products, Orders, and Cart.
 
 # Admin Setup
-Create a default admin user for testing:
-```bash
+Create a default admin user for testing
 node createAdmin.js
 
 # Rate Limiting
